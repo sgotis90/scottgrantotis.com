@@ -19,7 +19,7 @@ body {
 }
 
 #home {
-  background-image: url("images/surfing.png");
+  background: url("images/surfing.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: 0 0;
