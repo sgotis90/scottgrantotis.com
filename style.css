@@ -19,7 +19,7 @@ body {
 }
 
 #home {
-  background: url("images/surfing.png");
+  background: url("images/surfing.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: 0 0;
@@ -177,39 +177,39 @@ when hovered over*/
   transform: scale(1.2);
 }
 .first-image {
-background-image: url("images/gradphoto.png");
+background-image: url("images/gradphoto.jpg");
 }
 
 .second-image {
-background-image: url("images/famp.png");
+background-image: url("images/famp.jpg");
 }
 
 .third-image {
-background-image: url("images/minneapolis.png");
+background-image: url("images/minneapolis.jpg");
 }
 
 .fourth-image {
-background-image: url("images/openroads.png");
+background-image: url("images/openroads.jpg");
 }
 
 .fifth-image {
-background-image: url("images/cycling2.png");
+background-image: url("images/cycling2.jpg");
 }
 
 .sixth-image {
-background-image: url("images/cyclinges.png");
+background-image: url("images/cyclinges.jpg");
 }
 
 .seventh-image {
-background-image: url("images/newyork.png");
+background-image: url("images/newyork.jpg");
 }
 
 .eighth-image {
-background-image: url("images/surfy.png");
+background-image: url("images/surfy.jpg");
 }
 
 .nineth-image {
-background-image: url("images/fam.png");
+background-image: url("images/fam.jpg");
 }
 .clients-text {
   font: small-caps 500 50px 'Lato';
@@ -230,7 +230,10 @@ BIO
   background-image: url("http://bestanimations.com/Nature/Water/ocean-water-animated-gif-5.gif#.WoY89Lj3jbA.link");
   background-size: cover;
   background-attachment: fixed;
+
 }
+
+
 
 .bio-header {
   color: #fff;
@@ -240,6 +243,7 @@ BIO
   perspective: 50em;
   perspective-origin: 50% calc(50% - 18em);
 }
+
 
 .inner-div {
   position: relative;
@@ -281,12 +285,14 @@ BIO
   height: 200px;
   margin: 0 auto;
   margin-left: 50px;
-  background-image: url("images/best.png");
+  background-image: url("images/best.jpg");
   background-size: cover;
   border-radius: 50%;
   box-shadow: 0 0 3px #111;
   border: 6px solid #FFF;
   backface-visibility: hidden;
+
+
 }
 
 .front-text {
@@ -338,7 +344,7 @@ p {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background-color: $black;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -348,6 +354,7 @@ p {
 
 .social-media-wrapper {
   font-size: 3.8em;
+  z-index: 1;
 }
 
 .social-icon {
@@ -383,7 +390,7 @@ p {
 
 .inner-div:hover {
   transform: rotateY(180deg);
-  background-color: transparent;
+  background-color: black;
 }
 
 .inner-div:hover .social-icon {
