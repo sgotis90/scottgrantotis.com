@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Makes this work on mobile devices without being super zoomed out -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Info Website</title>
 <link rel="shortcut icon" type="image/png" href="info-alt-128.png"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,13 +35,18 @@ body {
     font-weight: 300;
     color:white;
     text-align:center;
+    height: 95vh;
     
 }
 
-@media only screen and (max-width: 467px) 
+@media only screen and (max-width: 767px) 
 {body {
     background-image:url(./images/surf.JPG);
     background-attachment:fixed;
+    background-size: cover;
+    height: 100%;
+    height: 95vh;
+
 
     
     
@@ -122,6 +129,11 @@ h4 {
 #content1 p, #content4 p{
     width: 50%;
 
+}
+@media only screen and (max-width: 767px) 
+{#content1 p{
+width: 90%;
+}
 }
 
 
