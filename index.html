@@ -14,21 +14,7 @@ body, html {
     padding:0;
     margin:0;
 }
-#navbar{
-animation: fadein 2s;
-}
 
-@media only screen and (max-width: 767px) 
-{#navbar {
-    font-size: 13px !important;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-}
 
 
 
@@ -50,23 +36,6 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-@media only screen and (max-width: 767px) 
-{.banner {
-    background-image:url(./images/surf.JPG);
-    background-attachment:fixed;
-    background-size: cover;
-    height: 95vh;
-}
-.bannertext {
-    margin-top: 34%;
-
-}
-
-.bannertext h2{
-    font-size: 14px;
-}
 }
 
 
@@ -147,19 +116,7 @@ h4 {
     width: 50%;
 
 }
-@media only screen and (max-width: 767px) 
-{#content1 p{
-width: 90%;
-}
-}
 
-
-@media only screen and (max-width: 767px) 
-{
-     #content1 p{
-        width: 80%;
-    }
-}
 
 
 
@@ -201,42 +158,7 @@ display: flex;
 display: flex;
 }
 
-@media only screen and (max-width: 767px) 
-{#break1{
-background-image:url(./images/mountain.JPG);
-    height: 500px;
-    background-attachment:fixed;
-    background-position: center center;
-background-size: cover;
-display: flex;
-}
-#break2 {
-    background-image:url(./images/bottomturn.JPG);
-    height: 500px;
-    background-attachment:fixed;
-    background-position: center center;
-    background-size: cover;
-display: flex;
-}
 
-#break3 {
-    background-image:url(./images/rincon.JPG);
-    height: 500px;
-    background-attachment:fixed;
-    background-position: center center;
-    background-size: cover;
-display: flex;
-}
-
-#break4 {
-    background-image:url(./images/roads.JPG);
-    height: 500px;
-    background-attachment:fixed;
-    background-position: center center;
-    background-size: cover;
-display: flex;
-}
-}
 
 
 #button2 {
@@ -258,39 +180,16 @@ display: flex;
     border-color:black;
     float:none;
 }
-#navbar {
-    colr:black;
-    text-align:right;
-    text-decoration:none;
-    list-style-type:none;
-    background-color:white;
-}
-
-@media only screen and (max-width: 767px) 
-{ #navbar {
-    font-size: 9px;
-    display: flex;
-  flex-direction: row;
-}
-#header {
-    font-size: 12px;
-}
-}
 
 
-
-
-
-
-#home, #about, #teams, #involve, #donate {
-    float:left;
-    margin-left:25px;
-    margin-top:30px;
+.menu-item {
     cursor:pointer;
     transition-duration:0.4s;
+    margin: 0 10px;
 }
-#home:hover, #about:hover, #teams:hover, #involve:hover, #donate:hover {
-    color:grey;
+
+.menu-item:hover{
+    color: gray;
 }
 .ative {
     border:solid 1px white;
@@ -313,11 +212,20 @@ button {
     background-color:white;
     position:fixed;
     height:100px;
+    display: flex;
+    align-items: center;
     color:black;
-    width:2000px;
+    width:100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition-duration:0.4s;
 }
+
+#navbar{
+animation: fadein 2s;
+display: flex;
+list-style-type:none;
+}
+
 .navbar-scrolled {
     background-color:white;
 }
@@ -343,29 +251,7 @@ button {
     
 }
 
-@media only screen and (max-width: 767px) 
-{.quarter {
-    width: 100%;
-}
 
-.threequarter{
-    width: 80%;
-    
-}
-
-h2 {
-    font-size: 16px;
-font-weight: 700;
-}
-
-h3{
-    font-size: 15px;
-}
-
-h4 {
-    font-size: 14px;
-}
-}
 
 div.row div {
 display: inline-block;
@@ -383,12 +269,7 @@ hr {
   padding: 30px;
 }
 
-@media only screen and (max-width: 467px) 
-{.social-media-wrapper {
-  font-size: 3.5em !important;
-  padding: 30px;
-}
-}
+
 
 .fa-envelope-square:hover{
 color: #939393;
@@ -431,9 +312,101 @@ transform:translateY(-10%);
 }
 
 @media only screen and (max-width: 767px) 
-{.social-media-wrapper {
+{.banner {
+    background:url(./images/surf.JPG) fixed center/cover;
+    height: 95vh;
+}
+.bannertext {
+    margin-top: 34%;
+
+}
+
+.bannertext h2{
+    font-size: 14px;
+}
+
+#navbar-bgr{
+    justify-content: center;
+}
+
+#navbar {
+    font-size: 3vw;
+    padding: 0;
+}
+#content1 p{
+width: 90%;
+}
+ #content1 p{
+        width: 80%;
+    }
+
+    #break1{
+background-image:url(./images/mountain.JPG);
+    height: 500px;
+    background-attachment:fixed;
+    background-position: center center;
+background-size: cover;
+display: flex;
+}
+#break2 {
+    background-image:url(./images/bottomturn.JPG);
+    height: 500px;
+    background-attachment:fixed;
+    background-position: center center;
+    background-size: cover;
+display: flex;
+}
+
+#break3 {
+    background-image:url(./images/rincon.JPG);
+    height: 500px;
+    background-attachment:fixed;
+    background-position: center center;
+    background-size: cover;
+display: flex;
+}
+
+#break4 {
+    background-image:url(./images/roads.JPG);
+    height: 500px;
+    background-attachment:fixed;
+    background-position: center center;
+    background-size: cover;
+display: flex;
+}
+
+.quarter {
+    width: 100%;
+}
+
+.threequarter{
+    width: 80%;
+    
+}
+
+h2 {
+    font-size: 16px;
+font-weight: 700;
+}
+
+h3{
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 14px;
+}
+.social-media-wrapper {
   font-size: 4.3em;
   padding: 10px;
+}
+}
+
+@media only screen and (max-width: 467px) 
+{.social-media-wrapper {
+  font-size: 3.5em !important;
+  padding: 30px;
+}
 }
 
 </style>
@@ -442,11 +415,11 @@ transform:translateY(-10%);
 <body>
 <div id="navbar-bgr">
 <ul id="navbar">
-<li class="active" id="home"><a href="#header">Home</a></li>
-<li id="about"><a href="#content1">About</a></li>
-<li id="teams"><a href="#content2">Resume</a></li>
-<li id="involve"><a href="#content3">Past Work</a></li>
-<li id="donate"><a href="#content4">Contact</a></li>
+<li class="menu-item" id="home"><a href="#header">Home</a></li>
+<li id="about" class="menu-item"><a href="#content1">About</a></li>
+<li id="teams" class="menu-item"><a href="#content2">Resume</a></li>
+<li id="involve" class="menu-item"><a href="#content3">Past Work</a></li>
+<li id="donate" class="menu-item"><a href="#content4">Contact</a></li>
 </ul>
 </div>
 <div id="header" class="banner">
