@@ -3,348 +3,264 @@
 <head>
     <!-- Makes this work on mobile devices without being super zoomed out -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Info Website</title>
-<link rel="shortcut icon" type="image/png" href="info-alt-128.png"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Info Website</title>
+    <link rel="shortcut icon" type="image/png" href="info-alt-128.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700" rel="stylesheet">
 
-<style type="text/css">
+    <style type="text/css">
+    body, html {
+        padding:0;
+        margin:0;
+        overflow-x: hidden;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        scroll-behavior: smooth;
+    }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Montserrat:700,400|Roboto:400,100,300,500,900');
-body, html {
-    padding:0;
-    margin:0;
-    overflow-x: hidden;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, 
+    h2,
+    h3,
+    h4 {
+        font-family: 'Montserrat';
+        font-weight: 400;
+    }
+
+    a {
+        text-decoration:none;
+        color:inherit;
+    }
+
+    hr {
+        border-color: #ddd;
+        margin: 30px auto;
+    }
+
+    
+
+    #header {
+        height: 100vh;
+        background:url(./images/surf.JPG) center/cover fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navbar-bgr {
+        background: white;
+        position: fixed;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        color: black;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 0 30px;
+    }
+
+    #navbar{
+        display: flex;
+        list-style-type:none;
+    }
 
 
+    .menu-item {
+        cursor:pointer;
+        transition-duration:0.4s;
+        margin: 0 20px;
+    }
+
+    .menu-item:hover{
+        color: gray;
+    }
+
+    .bannertext {
+        text-align: center;
+        color: #fff;
+    }
+
+    .bannertext h2 {
+        margin: 10px;
+        line-height: 1.5;
+    }
 
 
-body {
+    .scotty-button {
+        color:white;
+        font-family:'Montserrat';
+        font-size: 20px;
+        border: solid 2px white;
+        margin: 10px;
+        padding: 10px 15px;
+        display: inline-block;
+        transition: 0.2s all ease-in-out;
+        border-radius: 3px;
+    }
 
-    font-family:'Lato', sans-serif;
-    font-weight: 300;
-    color:white;
+    .scotty-button:hover {
+        background: white;
+        color: black;
+    }
+
+    .content {
+        background: white;
+        color: black;
+        line-height: 1.75;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 70px;
+    }
+
+    .content p {
+        text-align: justify;
+        margin: 20px 0;
+    }
+
+    .content h1 {
     text-align:center;
-    height: 95vh;
-    
-}
-
-.banner {
-     background-image:url(./images/surf.JPG);
-    background-attachment:fixed;
-    background-position: center center;
-    background-size: cover;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-h1, 
-h2,
-h3,
-h4 {
-    font-family: 'Montserrat';
-    font-weight: 400;
-}
-
-#header {
-    padding-top:22%;
-    
-    
-
-}
-
-
-
-#button1 {
-    background-color:transparent;
-    color:white;
-    transition-duration:0.4s;
-    cursor:pointer;
-    font-family:'julius sans one';
-    padding-left:1%;
-    padding-right:1%;
-    padding-top:.5%;
-    padding-bottom:.5%;
-    font-size:16px;
-    border:solid 2px white;
-    margin:10px;
-}
-#button1:hover {
-    background-color:white;
-    color:black;
-    border-color:white;
-}
-
-#button9 {
-    background-color:transparent;
-    color:black;
-    transition-duration:0.4s;
-    cursor:pointer;
-    font-family:'julius sans one';
-    padding-left:1%;
-    padding-right:1%;
-    padding-top:.30%;
-    padding-bottom:.5%;
-    font-size:18px;
-    font-weight: 700;
-    border:solid 2px black;
-    margin:10px;
-    width: 15%;
-}
-#button9:hover {
-    background-color:black;
-    color:white;
-    border-color:black;
-}
-
-#content1, 
-#content2,
-#content3,
-#content4 {
-    background-color:white;
-    color:black;
-    padding-top:3%;
-    padding-bottom:2%;
-    line-height: 1.6;
-    display: flex;
-  flex-direction: column;
-}
-
-#content1 p, #content4 p{
-    width: 50%;
-
-}
-
-#break1 {
-    background:url(./images/mountain.JPG) center/cover;
-}
-
-#break2 {
-    background:url(./images/bottomturn.JPG) center/cover;
-}
-
-#break3 {
-    background:url(./images/rincon.JPG) center/cover;
-}
-
-#break4 {
-    background:url(./images/roads.JPG) center/cover;
-}
-
-.image-break{
-    height: 600px;
-    max-width: 100%;
-}
-
-
-
-
-#button2 {
-    background-color:black;
-    color:white;
-    border:solid 2px black;
-    padding-left:1%;
-    padding-right:1%;
-    padding-bottom:.5%;
-    padding-top:.5%;
-    font-size:16px;
-    cursor:pointer;
-    transition-duration:0.4s;
-    font-family:'julius sans one'
-}
-#button2:hover {
-    background-color:white;
-    color:black;
-    border-color:black;
-    float:none;
-}
-
-
-.menu-item {
-    cursor:pointer;
-    transition-duration:0.4s;
-    margin: 0 10px;
-}
-
-.menu-item:hover{
-    color: gray;
-}
-.ative {
-    border:solid 1px white;
-    border-radius:4px;
-    padding-top:1.5px;
-    padding-bottom:1.5px;
-    padding-left:1.5px;
-    padding-right:1.5px;
-}
-a {
-    text-decoration:none;
-    color:inherit;
-}
-button {
-    text-decoration:none;
-    color:inherit;
-}
-
-#navbar-bgr {
-    background-color:white;
-    position:fixed;
-    height:100px;
-    display: flex;
-    align-items: center;
-    color:black;
-    width:100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition-duration:0.4s;
-}
-
-#navbar{
-animation: fadein 2s;
-display: flex;
-list-style-type:none;
-}
-
-.navbar-scrolled {
-    background-color:white;
-}
-
-@keyframes fadein {
-    from {
-        opacity:0;
+        margin-bottom: 15px;
     }
-    to {
-        opacity:1;
+
+
+
+    #content2, #content2 p {
+        text-align: center;
     }
-}
 
-.quarter {
-    width: 24%;
-    
-}
+    #break1 {
+        background:url(./images/mountain.JPG) center/cover fixed;
+    }
 
-.threequarter{
-    width: 55%;
-    
-}
+    #break2 {
+        background:url(./images/bottomturn.JPG) center/cover fixed;
+    }
 
+    #break3 {
+        background:url(./images/rincon.JPG) center/cover fixed;
+    }
 
+    #break4 {
+        background:url(./images/roads.JPG) center/cover fixed;
+    }
 
-div.row div {
-display: inline-block;
+    .image-break{
+        height: 600px;
+        max-width: 100%;
+    }
 
-}
+    .scottyresume {
+        display: flex;
+        align-items: center;
+    }
 
-hr {
-    border-bottom: 1px solid #888888;
-    width: 80%;
-    border-top: 0px;
-}
+    .logo {
+        width: 150px;
+        flex-shrink: 0;
+        margin-right: 50px;
+    }
 
-.social-media-wrapper {
-  font-size: 4.8em;
-  padding: 30px;
-}
+    .logo img {
+        max-width: 100%;
+    }
 
+    #content4 {
+        text-align: center;
+    }
 
+    .social-media-wrapper .fa {
+        font-size: 70px;
+        margin: 0 5px;
+        transition: 0.2s all ease-in-out;
+    }
 
-.fa-envelope-square:hover{
-color: #939393;
-transform:translateY(-10%);
-    padding-bottom: 10px;
-}
+    .fa-envelope-square:hover, .fa-download:hover{
+        color: #939393;
+        transform:translateY(-5px);
+    }
 
-.fa-facebook-square:hover{
-    color: #3b5998;
-    transform:translateY(-10%);
-    padding-bottom: 10px;
-}
+    .fa-facebook-square:hover{
+        color: #3b5998;
+        transform:translateY(-5px);
+    }
 
-.fa-instagram:hover{
-     color: transparent;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  transform:translateY(-10%);
-    padding-bottom: 10px;
-}
+    .fa-instagram:hover{
+        color: transparent;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transform:translateY(-5px);
+    }
 
-.fa-linkedin-square:hover{
-    color: #0976b4;
-    transform:translateY(-10%);
-    padding-bottom: 10px;
-}
+    .fa-linkedin-square:hover{
+        color: #0976b4;
+        transform:translateY(-5px);
+    }
 
-.fa-pinterest-square:hover{
-    color: #cc2127;
-    transform:translateY(-10%);
-    padding-bottom: 10px;
-}
+    .fa-pinterest-square:hover{
+        color: #cc2127;
+        transform:translateY(-5px);
+    }
 
-.fa-github-square:hover{
-    color: #f78036;
-    transform:translateY(-10%);
-    padding-bottom: 10px;
-}
+    .fa-github-square:hover{
+        color: #f78036;
+        transform:translateY(-5px);
+    }
 
-@media only screen and (max-width: 767px) 
-{.banner {
-    background:url(./images/surf.JPG) fixed center/cover;
-    height: 95vh;
-}
-.bannertext {
-    margin-top: 34%;
+    @media only screen and (max-width: 767px) 
+    {
+        #navbar-bgr{
+            justify-content: center;
+        }
 
-}
+        #navbar {
+            font-size: 3vw;
+            padding: 0;
+        }
 
-.bannertext h2{
-    font-size: 14px;
-}
+        .menu-item {
+            margin: 0 10px;
+        }
 
-#navbar-bgr{
-    justify-content: center;
-}
+        h2 {
+            font-size: 16px;
+        }
 
-#navbar {
-    font-size: 3vw;
-    padding: 0;
-}
-#content1 p{
-width: 80%;
-}
+        h3{
+            font-size: 15px;
+        }
 
-.quarter {
-    width: 100%;
-}
+        h4 {
+            font-size: 14px;
+        }
 
-.threequarter{
-    width: 80%;
-    
-}
+        .image-break{
+            height: 500px;
+        }
 
-h2 {
-    font-size: 16px;
-font-weight: 700;
-}
+        .scottyresume {
+            flex-direction: column;
+        }
 
-h3{
-    font-size: 15px;
-}
+        .logo {
+            margin-right: 0;
+        }
 
-h4 {
-    font-size: 14px;
-}
-.social-media-wrapper {
-  font-size: 3.3em;
-}
-
-.image-break{
-    height: 500px;
-}
-}
+        .job-title {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .social-media-wrapper .fa {
+        font-size: 40px;
+        margin: 0 2px;
+    }
+    }
 
 
 
@@ -352,104 +268,103 @@ h4 {
 </head>
 
 <body>
-<div id="navbar-bgr">
-<ul id="navbar">
-<li class="menu-item" id="home"><a href="#header">Home</a></li>
-<li id="about" class="menu-item"><a href="#content1">About</a></li>
-<li id="teams" class="menu-item"><a href="#content2">Resume</a></li>
-<li id="involve" class="menu-item"><a href="#content3">Past Work</a></li>
-<li id="donate" class="menu-item"><a href="#content4">Contact</a></li>
-</ul>
-</div>
-<div id="header" class="banner">
-<div class="bannertext">
-<h1>Scott Otis</h1>
-<h2>Website Services Specialist | AppFolio Property Manager</h2>
-<button id="button1"><a href="#content3">RESUME</a></button>
-</div>
-</div>
-<div id="content1">
-    <h1>About</h1>
-    <center><p align="justify">Scott brings life into every conversation through his positive attitude and energy. He has spent over six years in retail management where he has honed his skills in leadership. He has a passion for serving others, whether in or out of the work environment. Scott's passion for service radiates in the work environment as he always gives his best in every situation and looks out for the common good. While working for Channel Islands Surfboards, his punctuality, organization and attention to detail shined as he fulfilled surfboard orders for customers all over the world. His strength in communication has helped him build clientele and life long customers for Channel Islands Surfboards.</p></center>
+    <div id="navbar-bgr">
+        <ul id="navbar">
+            <li class="menu-item" id="home"><a href="#header">Home</a></li>
+            <li id="about" class="menu-item"><a href="#content1">About</a></li>
+            <li id="teams" class="menu-item"><a href="#content2">Resume</a></li>
+            <li id="involve" class="menu-item"><a href="#content3">Past Work</a></li>
+            <li id="donate" class="menu-item"><a href="#content4">Contact</a></li>
+        </ul>
+    </div>
+    <div id="header">
+        <div class="bannertext">
+            <h1>Scott Otis</h1>
+            <h2>Website Services Specialist | AppFolio Property Manager</h2>
+            <a href="#content3" class="scotty-button">RESUME</a>
+        </div>
+    </div>
+    <div id="content1" class="content">
+        <h1>About Scott</h1>
+        <p>Scott brings life into every conversation through his positive attitude and energy. He has spent over six years in retail management where he has honed his skills in leadership. He has a passion for serving others, whether in or out of the work environment. Scott's passion for service radiates in the work environment as he always gives his best in every situation and looks out for the common good. While working for Channel Islands Surfboards, his punctuality, organization and attention to detail shined as he fulfilled surfboard orders for customers all over the world. His strength in communication has helped him build clientele and life long customers for Channel Islands Surfboards.</p>
 
-    <center><p align="justify">Over the past year, Scott has been a part of the Appfolio Websites Team where he has been exposed to his first corporate work environment. He has learned to work in a colaborative environment on a team of web designers to maintain, build and develop Wordpress powered websites for property managers. He has grown in his knowledge in both HTML and CSS in order to meet the needs of his customers. He has also grown in his ability to maintain DNS Zone files and add new zone files in order to create custom subdodmains and email addresses for Appfolio customer's websites. 
-    </p></center>
-    <br>
-    
-</div>
-<div id="break1" class="image-break"></div>
-    <div id="content2">
-    
-            <h1>RESUME</h1>
-            <p>By clicking the icon below, you will find my most recent resume.</p>
-               <div class="social-media-wrapper"> 
-                <a href="Resume.pdf" target="_blank"<i class="fa fa-download" aria-hidden="true"></i></a>
-                
+        <p>Over the past year, Scott has been a part of the Appfolio Websites Team where he has been exposed to his first corporate work environment. He has learned to work in a colaborative environment on a team of web designers to maintain, build and develop Wordpress powered websites for property managers. He has grown in his knowledge in both HTML and CSS in order to meet the needs of his customers. He has also grown in his ability to maintain DNS Zone files and add new zone files in order to create custom subdodmains and email addresses for Appfolio customer's websites. 
+        </p>
+        <br>
+
+    </div>
+    <div id="break1" class="image-break"></div>
+    <div id="content2" class="content">
+
+        <h1>RESUME</h1>
+        <p>By clicking the icon below, you will find my most recent resume.</p>
+        <div id="social-resume" class="social-media-wrapper"> 
+            <a href="Resume.pdf" target="_blank"<i class="fa fa-download" aria-hidden="true"></i></a>
+
         </div>
     </div>
 </div>
 <div id="break2" class="image-break"></div>
-<div id="content3">
-<h1>PAST WORK</h1>
-            <div class="scottyresume">
-
-                <div class="row">
-                    <div class="quarter">
-                        <a href="https://www.appfolio.com/" target="_blank"><img src="./images/appfolio1.JPG"></a>
-                    </div>
-                    <div class="threequarter">
-                        <h2 align="left">Appfolio - Website Services Specialist</h2>
-                        <h3 align="left">Oct 2017 – Present</h3>
-                        <h4 align="left">Goleta, Ca</h4>
-                        <p align="justify">As part of the Appfolio Websites Team, I work with a team of talented individuals in a high pace environment to maintain Wordpress powered websites. Our team uses HTML and CSS languages to make our websites unique and compatible with the Appfolio software our company provides. We manage domain renewals, domain transfers, and any necessary zone file updates requested by our customers. I pride myself not only on the amount of work I do, but also the quality of work I do. Web design is something that I believe is an art and I am passionate about bringing peoples dreams to life by delivering superior websites.</p>
-                    </div>
-                </div>
+<div id="content3" class="content">
+    <h1>PAST WORK</h1>
+    <div class="scottyresume">
+        <div class="logo">
+            <a href="https://www.appfolio.com/" target="_blank"><img src="./images/appfolio1.JPG"></a>
+        </div>
+        <div class="job">
+            <div class="job-title">
+                <h2>Appfolio - Website Services Specialist</h2>
+                <h3>Oct 2017 – Present</h3>
+                <h4>Goleta, Ca</h4>
             </div>
+            <p>As part of the Appfolio Websites Team, I work with a team of talented individuals in a high pace environment to maintain Wordpress powered websites. Our team uses HTML and CSS languages to make our websites unique and compatible with the Appfolio software our company provides. We manage domain renewals, domain transfers, and any necessary zone file updates requested by our customers. I pride myself not only on the amount of work I do, but also the quality of work I do. Web design is something that I believe is an art and I am passionate about bringing peoples dreams to life by delivering superior websites.</p>
+        </div>
+    </div>
 
-<hr>
-            <div class="scottyresume">
-                        <div class="row">
-                            <div class="quarter">
-                            <a href="https://www.cisurfboards.com/" target="_blank"><img src="./images/cisurfboards.JPG"></a>
-                            </div>
-                            <div class="threequarter">
-                                <h2 align="left">Channel Islands Surfbaords - Floor Supervisor</h2>
-                                <h3 align="left">Mar 2015 – Oct 2017</h3>
-                                <h4 align="left">Santa Barbara, Ca</h4>
-                                <p align="justify">As the Floor Supervisor for Channel Islands Surfboards, I was tasked with managing the sales floor and overseeing large transactions that could reach up to $10,000. Much of my time was spent with high end customers that would place surfboard orders, helping them find the correct dimensions for their new surfboard. While working with Channel Islands Surfboards, I learned to be extremely meticulous in my note taking skills as surfboards are measured down to the sixteenth of an inch and a slight error could result in losing a sale. The job also included restocking and reordering products throughout the store, as well as merchandising new product depending on the season.</p>
-                            </div>
-                        </div>
-                    </div>  
-<hr>
-             <div class="scottyresume">
-                        <div class="row">
-                            <div class="quarter">
-                            <a href="https://www.apu.edu/" target="_blank"><img src="./images/apu.JPG"></a>
-                            </div>
-                            <div class="threequarter">
-                                <h2 align="left">Auzsa Pacific University - Senior Chapel Intern</h2>
-                                <h3 align="left">Nov 2016 – May 2017</h3>
-                                <h4 align="left">Azusa, Ca</h4>
-                                <p align="justify">As the Senior Chapel Intern for the 2016-2017 school year, I have been given the responsibility to contact guest speakers, schedule dates for them to speak at chapel, send out email blasts to seniors, and establish the best possible methods for reaching an audience of graduating seniors. Additionally, as the Senior Chapel Intern I am a voice and an advocate for the senior class and the campus pastors, giving positive and negative feedback on chapel speakers and the direction we want to take senior chapel.</p>
-                            </div>
-                        </div>
-                    </div> 
-<hr> 
-                    <div class="scottyresume">
-                        <div class="row">
-                            <div class="quarter">
-                            <a href="https://www.sundancebeach.com/" target="_blank"><img src="./images/sundance2.JPG"></a>
-                            </div>
-                            <div class="threequarter">
-                                <h2 align="left">Sundance Beach - Assistant Manager</h2>
-                                <h3 align="left">Nov 2008 – Mar 2014</h3>
-                                <h4 align="left">Goleta, Ca</h4>
-                                <p align="justify">As an Assistant Manager for Sundance Beach, I was given the responsibility to manage a large retail store by overseeing all sales associates. Areas of the job included motivating the sales team to push sales, and make weekly, monthly, and even yearly sales goals. I was also given the responsibility of training new employees on product knowledge and store procedures. During my time with Sundance Beach, I was a two-time MVP for store, which was given to employees that prove themselves through hard work, punctuality and dedication to the job.</p>
-                            </div>
-                        </div>
-                    </div>  
-                    
+    <hr>
+    <div class="scottyresume">
+        <div class="logo">
+            <a href="https://www.cisurfboards.com/" target="_blank"><img src="./images/cisurfboards.JPG"></a>
+        </div>
+        <div class="job">
+            <div class="job-title">
+                <h2>Channel Islands Surfbaords - Floor Supervisor</h2>
+                <h3 >Mar 2015 – Oct 2017</h3>
+                <h4>Santa Barbara, Ca</h4>
             </div>
+            <p>As the Floor Supervisor for Channel Islands Surfboards, I was tasked with managing the sales floor and overseeing large transactions that could reach up to $10,000. Much of my time was spent with high end customers that would place surfboard orders, helping them find the correct dimensions for their new surfboard. While working with Channel Islands Surfboards, I learned to be extremely meticulous in my note taking skills as surfboards are measured down to the sixteenth of an inch and a slight error could result in losing a sale. The job also included restocking and reordering products throughout the store, as well as merchandising new product depending on the season.</p>
+        </div>
+    </div>  
+    <hr>
+    <div class="scottyresume">
+        <div class="logo">
+            <a href="https://www.apu.edu/" target="_blank"><img src="./images/apu.JPG"></a>
+        </div>
+        <div class="job">
+            <div class="job-title">
+                <h2>Auzsa Pacific University - Senior Chapel Intern</h2>
+                <h3>Nov 2016 – May 2017</h3>
+                <h4>Azusa, Ca</h4>
+            </div>
+            <p>As the Senior Chapel Intern for the 2016-2017 school year, I have been given the responsibility to contact guest speakers, schedule dates for them to speak at chapel, send out email blasts to seniors, and establish the best possible methods for reaching an audience of graduating seniors. Additionally, as the Senior Chapel Intern I am a voice and an advocate for the senior class and the campus pastors, giving positive and negative feedback on chapel speakers and the direction we want to take senior chapel.</p>
+        </div>
+    </div>
+    <hr> 
+    <div class="scottyresume">
+        <div class="logo">
+            <a href="https://www.sundancebeach.com/" target="_blank"><img src="./images/sundance2.JPG"></a>
+        </div>
+        <div class="job">
+            <div class="job-title">
+                <h2>Sundance Beach - Assistant Manager</h2>
+                <h3>Nov 2008 – Mar 2014</h3>
+                <h4>Goleta, Ca</h4>
+            </div>
+            <p>As an Assistant Manager for Sundance Beach, I was given the responsibility to manage a large retail store by overseeing all sales associates. Areas of the job included motivating the sales team to push sales, and make weekly, monthly, and even yearly sales goals. I was also given the responsibility of training new employees on product knowledge and store procedures. During my time with Sundance Beach, I was a two-time MVP for store, which was given to employees that prove themselves through hard work, punctuality and dedication to the job.</p>
+        </div>
+    </div>
+
+</div>
 
 </div>
 
@@ -459,9 +374,9 @@ h4 {
 
 </div>
 <div id="break3" class="image-break"></div>
-<div id="content4">
-<h1>Contact</h1>
-<div class="social-media-wrapper">
+<div id="content4" class="content">
+    <h1>Contact</h1>
+    <div id="social-icons" class="social-media-wrapper">
 
         <a href="mailto:scott.otis@appfolio.com"><i class="fa fa-envelope-square"></i></a>
 
@@ -473,19 +388,19 @@ h4 {
 
         <a href="https://www.pinterest.com/scotty1990/" target="_blank"><i class="fa fa-pinterest-square"></i></a>
 
-         <a href="https://github.com/sgotis90" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+        <a href="https://github.com/sgotis90" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 
-</div>
-</div>
-
-
-
-    
-
-    <div id="break4" class="image-break">
-    
     </div>
-    
+</div>
+
+
+
+
+
+<div id="break4" class="image-break">
+
+</div>
+
 
 
 </body>
